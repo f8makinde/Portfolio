@@ -1,5 +1,7 @@
 import React from 'react'
-import { FaMailBulk } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa';
+import { MdOutlineMailOutline } from "react-icons/md";
+
 
 const Contact = () => {
   return (
@@ -14,8 +16,9 @@ const Contact = () => {
            </div>
           <div className='border bg-gray-300 text-black p-6'>
             <div className='flex justify-between'>
-                <span><FaMailBulk/> Email</span>
-
+                <span className='flex items-center gap-2'><MdOutlineMailOutline size={30}/> <span className='text-xl'>
+                Email</span></span>
+                <a href='' target='_blank'  className='flex items-center gap-2'><FaLinkedinIn /> Linkedln</a>
             </div>
           </div>
           </div>

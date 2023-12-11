@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 const Projects = () => {
   return (
     <div className="w-full bg-white md:h-screen lg:mb-32" id="projects">
-    <div className="mx-auto lg:max-w-[1400px] md:px-[50px] px-8  ">
+    <div className="mx-auto lg:max-w-[1400px] md:px-[50px] px-8">
       <div>
           <div className="flex flex-col">
               <p className="text-2xl font-semibold">Projects</p>

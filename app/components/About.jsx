@@ -2,12 +2,12 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='w-full flex p-10 text-black/90 md:h-screen' id='about'> 
-    <div className='max-w-[1400px] m-auto flex md:flex-row flex-col justify-between gap-6 px-8'>
-      <div className='flex-shrink-1 gap-3'>
+    <div className='w-full flex justify-center items-center text-black/90 md:h-screen my-8' id='about'> 
+    <div className='max-w-[1400px] mx-auto flex md:flex-row flex-col justify-center items-center gap-6 md:px-[50px] px-8'>
+      <div className='flex-shrink-1 md:w-1/2 gap-3'>
        
-            <span className='md:text-3xl text-2xl font-semibold '>About</span>
-            <span className='md:text-3xl text-2xl px-2 text-yellow font-semibold'>Me</span>
+            <span className='md:text-3xl text-2xl font-semibold text-purple-500'>About Me</span>
+           
             
             <h2 className='font-bold md:text-[40px] text-3xl font-primary'>Get a brief look at who I am and what I do.</h2> 
             
@@ -20,7 +20,7 @@ const About = () => {
               <p>Let's create something remarkable together</p>
     
           </div>
-          <div className='flex flex-col gap-3'>
+          <div className='flex flex-col gap-3 md:w-1/2'>
               
                 
                 <span className='text-3xl font-semibold'>My Skills</span>                            
