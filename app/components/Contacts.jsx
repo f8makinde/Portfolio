@@ -14,11 +14,11 @@ const Contacts = () => {
   }
 
   return (
-    <div className='w-full flex p-10 text-black h-screen' id='about'> 
-    <div className='mx-auto max-w-[1400px] px-8'>
-      <div className='flex-shrink-1  gap-3'>
-      <h2 className='font-bold md:text-[40px] text-3xl text-center font-primary'>Interested in working with me?</h2> 
-            <h1 className='md:text-3xl text-2xl font-semibold text-center text-purple-500'>Contact Me</h1>
+    <div className='w-full flex py-10 text-black h-screen' id='contact'> 
+    <div className='mx-auto max-w-[800px] md:px-[50px] px-8'>
+      <div className='flex-shrink-1 items-center justify-center gap-3'>
+      <h2 className='font-bold md:text-[40px] my-3 text-3xl md:text-center font-primary text-purple-500 '>Interested in working with me?</h2> 
+            <h1 className='text-xl font-medium md:text-center'>I’m currently open to joining a new team of creative developers. If you have a question, proposal, idea or just want to say hi, Go ahead.</h1>
             
           
             

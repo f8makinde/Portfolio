@@ -15,14 +15,14 @@ const Navbar = () => {
   }
   return (
     <div className="w-full mx-auto  md:bg-white/60 md:px-[50px] px-8 md:py-[22px] py-4 bg-white/80 sticky top-0  left-0 z-50 ">
-      <div className="md:flex xl:max-w-[1200px] px-10  mx-auto justify-between hidden">
+      <div className="md:flex xl:max-w-[1400px] px-10  mx-auto justify-between hidden">
         <span className="flex font-primary text-2xl font-bold">
           <p>Faith Makinde</p>
         </span>
         <ul className="flex items-center font-secondaryBld text-lg font-bold">
           <li
             className={`px-3 cursor-pointer ${
-              active === "home" ? "border-b-2 border-yellow" : ""
+              active === "home" ? "border-b-2 border-purple-500" : ""
             }`}
           >
             <Link
@@ -39,7 +39,7 @@ const Navbar = () => {
           </li>
           <li
             className={`px-3 cursor-pointer ${
-              active === "projects" ? "border-b-2 border-yellow" : ""
+              active === "projects" ? "border-b-2 border-purple-500" : ""
             }`}
           >
             <Link
@@ -56,7 +56,7 @@ const Navbar = () => {
           </li>
           <li
             className={`px-3 cursor-pointer ${
-              active === "about" ? "border-b-2 border-yellow" : ""
+              active === "about" ? "border-b-2 border-purple-500" : ""
             }`}
           >
             <Link
@@ -73,7 +73,7 @@ const Navbar = () => {
           </li>
           <li
             className={`px-3 cursor-pointer ${
-              active === "contact" ? "border-b-2 border-yellow" : ""
+              active === "contact" ? "border-b-2 border-purple-500" : ""
             }`}
           >
             <Link
@@ -122,7 +122,7 @@ const Navbar = () => {
             <ul className="flex font-secondaryBld py-2 w-full flex-col text-lg font-bold">
               <li
                 className={`p-3 cursor-pointer ${
-                  active === "home" ? "border-b-2 border-yellow w-[30%]" : ""
+                  active === "home" ? "border-b-2 border-purple-500 w-[30%]" : ""
                 }`}
               >
                 <Link
@@ -140,7 +140,7 @@ const Navbar = () => {
               <li
                 className={`p-3 cursor-pointer ${
                   active === "projects"
-                    ? "border-b-2 border-yellow w-[30%]"
+                    ? "border-b-2 border-purple-500 w-[30%]"
                     : ""
                 }`}
               >
@@ -158,7 +158,7 @@ const Navbar = () => {
               </li>
               <li
                 className={`p-3 cursor-pointer ${
-                  active === "about" ? "border-b-2 border-yellow w-[30%]" : ""
+                  active === "about" ? "border-b-2 border-purple-500 w-[30%]" : ""
                 }`}
               >
                 <Link
@@ -175,7 +175,7 @@ const Navbar = () => {
               </li>
               <li
                 className={`p-3 cursor-pointer ${
-                  active === "contact" ? "border-b-2 border-yellow w-[30%]" : ""
+                  active === "contact" ? "border-b-2 border-purple-500 w-[30%]" : ""
                 }`}
               >
                 <Link

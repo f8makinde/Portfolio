@@ -9,7 +9,7 @@ const About = () => {
             <span className='md:text-3xl text-2xl font-semibold text-purple-500'>About Me</span>
            
             
-            <h2 className='font-bold md:text-[40px] text-3xl font-primary'>Get a brief look at who I am and what I do.</h2> 
+            <h2 className='font-bold md:text-[40px] text-3xl font-primary  my-3'>Get a brief look at who I am and what I do.</h2> 
             
             <p className='text-lg'>I'm a dedicated Frontend Web Developer skilled in HTML, CSS, JavaScript and React JS, passionate about creating captivating user experiences.</p>
             

@@ -12,7 +12,7 @@ const Projects = () => {
     <div className="mx-auto lg:max-w-[1400px] md:px-[50px] px-8">
       <div>
           <div className="flex flex-col">
-              <p className="text-2xl font-semibold">Projects</p>
+              <p className="text-2xl font-semibold text-purple-700">Projects</p>
               <h2 className="font-bold text-[40px] font-primary">
                 Small selection of things I’ve built
               </h2>
