@@ -17,7 +17,7 @@ const About = () => {
               
                 <p className='text-lg'>With an eye for detail and a commitment to accessibility, I craft interfaces that marry aesthetics with functionality. Check out some of my work in the Portfolio section.</p>
            
-              <p>Let's create something remarkable together</p>
+              <p>Let&apos;s create something remarkable together</p>
     
           </div>
           <div className='flex flex-col gap-3 md:w-1/2'>
