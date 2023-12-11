@@ -11,7 +11,7 @@ const About = () => {
             
             <h2 className='font-bold md:text-[40px] text-3xl font-primary  my-3'>Get a brief look at who I am and what I do.</h2> 
             
-            <p className='text-lg'>I'm a dedicated Frontend Web Developer skilled in HTML, CSS, JavaScript and React JS, passionate about creating captivating user experiences.</p>
+            <p className='text-lg'>I&apos;m a dedicated Frontend Web Developer skilled in HTML, CSS, JavaScript and React JS, passionate about creating captivating user experiences.</p>
             
                 <p className='text-lg'>By merging design and technology, I transform concepts into responsive, interactive websites. With an eye for detail and a commitment to accessibility, I craft interfaces that marry aesthetics with functionality. Check out some of my work in the Portfolio section.</p>
               

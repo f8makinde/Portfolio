@@ -8,7 +8,7 @@ const Hero = () => {
        <div className='lg:max-w-[1400px] mx-auto md:px-[50px] px-8'>
           <div className='flex lg:flex-row flex-col gap-8 justify-between'>
             <div>
-                <h3 className='text-xl  sm:text-left text-center text-black/80'>Hello, I'm</h3>
+                <h3 className='text-xl  sm:text-left text-center text-black/80'>Hello, I&apos;m</h3>
           <h1 className="lg:text-[100px] md:text-[80px] sm:text-[75px] text-6xl lg:leading-[7rem] md:leading-[5rem] font-extrabold text-black sm:text-left text-center font-primary">
               Faith <br /> Makinde <br />
             </h1>
