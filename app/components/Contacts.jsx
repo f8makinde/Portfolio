@@ -67,7 +67,7 @@ const Contacts = () => {
         ></textarea>
       </div>
       <div>
-        <button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
+        <button className='hover:shadow-form rounded-md hover:bg-purple-600 bg-purple-500 transition-colors py-3 px-8 text-base font-semibold text-white outline-none'>
           Submit
         </button>
       </div>

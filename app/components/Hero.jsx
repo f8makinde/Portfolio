@@ -1,8 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import mypics from "../assets/img/myPics.png"
+import { FaRegFilePdf } from "react-icons/fa6"
 import chatIcon from "../assets/svg/Vector (4).svg";
 const Hero = () => {
+  const resume  = "https://drive.google.com/file/d/1r0v-3UT8bgQPOVqYPq-Rmy-FFE5fBuQt/view?usp=sharing"
   return (
     <div className='w-full  my-8' id='home'>
        <div className='lg:max-w-[1400px] mx-auto md:px-[50px] px-8'>
@@ -31,15 +33,26 @@ const Hero = () => {
                 <Image src={chatIcon} alt="chat-icon"  className='text-white'/>
               </span>
           </a>
-          <a
+          <a href={resume}
+             target="_blank" rel="noopener noreferrer"
             className="relative my-4 flex justify-center items-center w-[176px] px-4 py-4 font-medium group cursor-pointer"
           >
-            <span className="absolute inset-0 w-full h-full transition rounded-lg duration-200 ease-out transform translate-x-1 translate-y-1 bg-purple-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+            <span className="absolute inset-0 w-full h-full transition rounded-lg duration-200 ease-out transform translate-x-1 translate-y-1 bg-purple-500 hover:bg-purple-400 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
             <span className="absolute inset-0 w-full h-full rounded-lg bg-yellow border-2 border-black/10 group-hover:bg-yellow"></span>
               <span className="relative text-white flex items-center text-lg font-secondaryBld font-bold gap-3">
                Resume
+               <FaRegFilePdf size={25} fill='white'/>
               </span>
           </a>
+            {/* <li
+                className={`p-3 cursor-pointer ${
+                  active === "resume" ? "border-b-2 border-black" : ""
+                }`}
+              >
+                <a href={resume} download onSetActive={handleSetActive}>
+                  Resume
+                </a>
+              </li> */}
           </div>
             </div>
             <Image src={mypics} alt="mypics" className='rounded-[100%] shadow-xl object-cover'/>
