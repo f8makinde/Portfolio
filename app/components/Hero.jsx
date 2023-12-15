@@ -1,26 +1,82 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
+import { motion } from "framer-motion"
 import mypics from "../assets/img/myPics.png"
 import { FaRegFilePdf } from "react-icons/fa6"
 import chatIcon from "../assets/svg/Vector (4).svg";
 const Hero = () => {
   const resume  = "https://drive.google.com/file/d/1r0v-3UT8bgQPOVqYPq-Rmy-FFE5fBuQt/view?usp=sharing"
+  const text = " I bring a unique perspective to the industry.".split(" ");
+  const text2 = "With a passion for solving complex problems and  a commitment".split(" ");
+  const text3 = " to staying up-to-date with the latest technologies".split(" ")
   return (
     <div className='w-full  my-8' id='home'>
        <div className='lg:max-w-[1400px] mx-auto md:px-[50px] px-8'>
           <div className='flex lg:flex-row flex-col gap-8 justify-between'>
             <div>
-                <h3 className='text-xl  sm:text-left text-center text-black/80'>Hello, I&apos;m</h3>
-          <h1 className="lg:text-[100px] md:text-[80px] sm:text-[75px] text-6xl lg:leading-[7rem] md:leading-[5rem] font-extrabold text-black sm:text-left text-center font-primary">
+                <motion.h3 
+                  initial={{ opacity: 1, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.1 }} 
+      className='text-xl  sm:text-left text-center text-black/80'>Hello, I&apos;m</motion.h3>
+          <motion.h1  
+           initial={{ opacity: 1, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25 }} className="lg:text-[100px] md:text-[80px] sm:text-[75px] text-6xl lg:leading-[7rem] md:leading-[5rem] font-extrabold text-black sm:text-left text-center font-primary">
               Faith <br /> Makinde <br />
-            </h1>
-            <h2 className='text-3xl text-black/80 font-medium sm:text-left text-center'>
+            </motion.h1>
+            <motion.h2  
+             initial={{ opacity: 1, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25 }}
+       className='text-3xl text-black/80 font-medium sm:text-left text-center'>
             Frontend Developer
-            </h2>
+            </motion.h2>
             <p className="font-medium text-xl sm:text-left text-center">
-              I bring a unique perspective to the industry. <br /> With a passion for
-              solving complex problems and <br /> a commitment to staying up-to-date
-              with the latest technologies
+            {text.map((el, i) => (
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.25,
+            delay: i / 30
+          }}
+          key={i}
+        >
+          {el}{" "}
+        </motion.span>
+      ))}
+            </p>
+            <p className="font-medium text-xl sm:text-left text-center">
+            {text2.map((el, i) => (
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.25,
+            delay: i / 20
+          }}
+          key={i}
+        >
+          {el}{" "}
+        </motion.span>
+      ))}
+            </p>
+            <p className="font-medium text-xl sm:text-left text-center">
+            {text3.map((el, i) => (
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.25,
+            delay: i / 10
+          }}
+          key={i}
+        >
+          {el}{" "}
+        </motion.span>
+      ))}
             </p>
            <div className='flex items-center gap-6'>
           <a
@@ -55,7 +111,18 @@ const Hero = () => {
               </li> */}
           </div>
             </div>
-            <Image src={mypics} alt="mypics" className='rounded-[100%] shadow-xl object-cover'/>
+            <motion.div 
+              initial={{ y: -10 }}
+              animate={{ y: 10 }}
+              transition={{
+                type: "smooth",
+                repeatType: "mirror",
+                duration: 2,
+                repeat: Infinity,
+              }} >
+    <Image   src={mypics} alt="mypics" className='rounded-[100%] shadow-xl object-cover'/>
+            </motion.div>
+        
           </div>
        </div>
     </div>

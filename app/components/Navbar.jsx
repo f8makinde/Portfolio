@@ -1,26 +1,31 @@
 "use client"
 import React from "react";
+import { motion } from "framer-motion"
 import Image from 'next/image'
-import { MdDarkMode, MdLightMode } from "react-icons/md";
 import Hamburger from "../assets/svg/Hamburger.svg";
 import { Link } from "react-scroll";
 import { useState } from "react";
-import { useDarkMode } from "../utils/useDarkMode";
+
 const Navbar = () => {
-  const [isDarkMode, toggleDarkMode] = useDarkMode();
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState(false);
   function handleSetActive(to) {
     setActive(to);
   }
   return (
-    <div className={`${isDarkMode ? "bg-black text-white" : "bg-white"} w-full mx-auto md:px-[50px] px-8 md:py-[22px] py-4 sticky top-0  left-0 z-50`}>
+    <div className={`w-full mx-auto md:px-[50px] px-8 md:py-[22px] py-4 sticky top-0  left-0 z-50`}>
       <div className="md:flex xl:max-w-[1400px] px-10  mx-auto justify-between hidden">
-        <span className="flex font-primary text-2xl font-bold">
+        <motion.span className="flex font-primary text-2xl font-bold"   
+          initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.2 }}>
           <p>Faith Makinde</p>
-        </span>
+        </motion.span>
         <ul className="flex items-center font-secondaryBld text-lg font-bold">
-          <li
+          <motion.li
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
             className={`px-3 cursor-pointer ${
               active === "home" ? "border-b-2 border-purple-500" : ""
             }`}
@@ -36,8 +41,11 @@ const Navbar = () => {
             >
               Home
             </Link>
-          </li>
-          <li
+          </motion.li>
+          <motion.li
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
             className={`px-3 cursor-pointer ${
               active === "projects" ? "border-b-2 border-purple-500" : ""
             }`}
@@ -53,8 +61,11 @@ const Navbar = () => {
             >
               Projects
             </Link>
-          </li>
-          <li
+          </motion.li>
+             <motion.li
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
             className={`px-3 cursor-pointer ${
               active === "about" ? "border-b-2 border-purple-500" : ""
             }`}
@@ -70,8 +81,11 @@ const Navbar = () => {
             >
               About Me
             </Link>
-          </li>
-          <li
+          </motion.li>
+              <motion.li
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
             className={`px-3 cursor-pointer ${
               active === "contact" ? "border-b-2 border-purple-500" : ""
             }`}
@@ -87,14 +101,14 @@ const Navbar = () => {
             >
               Contact
             </Link>
-          </li>
-        <li className="px-3 cursor-pointer">
+          </motion.li>
+        {/* <li className="px-3 cursor-pointer">
           <button onClick={toggleDarkMode}>
             {isDarkMode ?  <MdDarkMode size={20}/> : <MdLightMode size={20}/>}
       
           </button>
        
-        </li>
+        </li> */}
         </ul>
       </div>
       <div className="md:hidden">
