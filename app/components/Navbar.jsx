@@ -15,17 +15,18 @@ const Navbar = () => {
   return (
     <div className={`w-full mx-auto md:px-[50px] px-8 md:py-[22px] py-4 sticky top-0  left-0 z-50`}>
       <div className="md:flex xl:max-w-[1400px] px-10  mx-auto justify-between hidden">
-        <motion.span className="flex font-primary text-2xl font-bold"   
-          initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.2 }}>
+        <motion.span  
+         initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1}}
+       transition ={{duration: 0.8 }} className="flex font-primary text-2xl font-bold"   
+         >
           <p>Faith Makinde</p>
         </motion.span>
         <ul className="flex items-center font-secondaryBld text-lg font-bold">
           <motion.li
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
             className={`px-3 cursor-pointer ${
               active === "home" ? "border-b-2 border-purple-500" : ""
             }`}
@@ -43,9 +44,9 @@ const Navbar = () => {
             </Link>
           </motion.li>
           <motion.li
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
             className={`px-3 cursor-pointer ${
               active === "projects" ? "border-b-2 border-purple-500" : ""
             }`}
@@ -63,9 +64,9 @@ const Navbar = () => {
             </Link>
           </motion.li>
              <motion.li
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+         initial={{ opacity: 0, y: -20 }}
+         animate={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5, delay: 0.2 }}
             className={`px-3 cursor-pointer ${
               active === "about" ? "border-b-2 border-purple-500" : ""
             }`}
@@ -83,9 +84,9 @@ const Navbar = () => {
             </Link>
           </motion.li>
               <motion.li
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: 0.3 }}
             className={`px-3 cursor-pointer ${
               active === "contact" ? "border-b-2 border-purple-500" : ""
             }`}

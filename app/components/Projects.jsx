@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+import React from 'react';
+import { motion } from 'framer-motion';
 import fintekImg from "../assets/img/fintekk.png";
 import frot from "../assets/img/frot.png";
 import Image from 'next/image'
@@ -7,8 +9,14 @@ import link from "../assets/svg/link.svg";
 import Imdb from "../assets/img/imdb.png";
 import { FaGithub } from "react-icons/fa";
 const Projects = () => {
+  
   return (
-    <div className="w-full bg-white md:h-screen lg:mb-32" id="projects">
+    <motion.div     
+    initial={{ opacity: 0 }}
+ whileInView={{ opacity: 1 }}
+ viewport={{ once: true, amount: 0.25 }}
+    transition={{ duration: 0.3 }}
+className="w-full bg-white md:h-screen lg:mb-32" id="projects">
     <div className="mx-auto lg:max-w-[1400px] md:px-[50px] px-8">
       <div>
           <div className="flex flex-col">
@@ -26,6 +34,7 @@ const Projects = () => {
                   image={Imdb}
                   linkText="https://f8-imdb-clone.vercel.app"
                   gitLink="https://github.com/f8makinde/Imdb-clone.git"
+               
                 />
                   <SmallProject
                   name="Fintekk Page"
@@ -34,6 +43,7 @@ const Projects = () => {
                   image={fintekImg}
                   linkText="https://f8makinde.github.io/FINTEKK-LANDING-PAGE/"
                   gitLink="https://github.com/f8makinde/FINTEKK-LANDING-PAGE.git"
+                  
                 />
                     <SmallProject
                   name="Order Pizza"
@@ -43,6 +53,7 @@ const Projects = () => {
                   image={pizza}
                   linkText="https://order-fast-food.vercel.app/"
                   gitLink="https://github.com/f8makinde/Order-fast-food.git"
+                  
                 />
                     <SmallProject
                   name="Frot"
@@ -52,11 +63,12 @@ const Projects = () => {
                   image={frot}
                   linkText="https://amd12.vercel.app/"
                   gitLink="https://github.com/f8makinde/Amorad-page.git"
+                  
                 />
         </div>
         </div>
         </div>
-        </div>
+        </motion.div>
   )
 }
 
@@ -65,7 +77,12 @@ export default Projects
 function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
     const color = { yellow: "black", purple: "grey", peach: "peach" };
     return (
-      <div className="flex md:flex-col flex-col-reverse  border border-yellow rounded-2xl md:py-4 md:h-[100%] px-8">
+      <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.5 }}
+     
+       className="flex md:flex-col flex-col-reverse  border border-yellow rounded-2xl md:py-4 overflow-hidden md:h-[100%] px-8">
         <Image
           src={image}
           alt={name}
@@ -73,18 +90,29 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
         />
         <div className="flex flex-col  gap-3 px-4 md:border-b-0 py-2 border-b-2">
        
-            <h1 className="font-primary md:text-4xl text-3xl font-bold">
+            <motion.h1  
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 1 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}className="font-primary md:text-4xl text-3xl font-bold">
               {name}
-            </h1>
+            </motion.h1>
      
     
-            <p className="lg:text-lg text-base font-medium font-secondary">
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }} className="lg:text-lg text-base font-medium font-secondary">
               {desc}
-            </p>
+            </motion.p>
           <div className="flex flex-wrap items-center gap-2">
             {skill.map((skills, index) => {
               return (
-                  <ul
+                  <motion.ul  
+                      initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                     key={index}
                     className="text-white cursor-pointer rounded-full"
                     style={{
@@ -94,11 +122,14 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
                     <li className="text-lg font-semibold font-secondaryHvy py-1 px-2">
                       {skills}
                     </li>
-                  </ul>
+                  </motion.ul>
               );
             })}
           </div>
-            <a
+            <motion.a
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.6, delay: 0.8 }}
               href={linkText}
               target="_blank"
               type="button"
@@ -106,12 +137,16 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
             >
               Live Demo
               <Image src={link} alt="chat-icon" />
-            </a>
+            </motion.a>
         
-          <a href={gitLink} target="_blank" className="cursor-pointer">
+          <motion.a       
+              initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          href={gitLink} target="_blank" className="cursor-pointer">
           <FaGithub size={30}/>
-          </a>
+          </motion.a>
         </div>
-      </div>
+      </motion.div>
     );
   }
