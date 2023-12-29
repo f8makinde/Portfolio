@@ -1,37 +1,38 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Show from "./Show";
 const About = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.5 }}
       className="w-full flex justify-center items-center text-black/90 md:h-screen md:my-16 my-8"
       id="about"
     >
       <div className="max-w-[1400px] mx-auto flex md:flex-row flex-col justify-center items-center gap-6 md:px-[50px] px-8">
         <div className="flex-shrink-1 md:w-1/2 gap-3">
-          <motion.span
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <Show>
+          <span
             className="md:text-3xl text-2xl font-semibold text-purple-500"
           >
             About Me
-          </motion.span>
-
-          <motion.h2
+          </span>
+</Show>
+      <Show>
+          <h2
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className="font-bold md:text-[40px] text-3xl font-primary  my-3"
           >
             Get a brief look at who I am and what I do.
-          </motion.h2>
-
-          <motion.p
+          </h2>
+          </Show>
+          <Show>
+          <p
          initial={{ opacity: 0, y: 50 }}
          animate={{ opacity: 1, y: 0 }}
          transition={{ duration: 1.25 }}
@@ -40,9 +41,10 @@ const About = () => {
             I&apos;m a dedicated Frontend Web Developer skilled in HTML, CSS,
             JavaScript and React JS, passionate about creating captivating user
             experiences.
-          </motion.p>
-
-          <motion.p
+          </p>
+          </Show>
+          <Show>
+          <p
        initial={{ opacity: 0, y: 50 }}
        animate={{ opacity: 1, y: 0 }}
        transition={{ duration: 1.5 }}
@@ -53,9 +55,10 @@ const About = () => {
             commitment to accessibility, I craft interfaces that marry
             aesthetics with functionality. Check out some of my work in the
             Portfolio section.
-          </motion.p>
-
-          <motion.p
+          </p>
+          </Show>
+          <Show>
+          <p
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.65 }}
@@ -64,25 +67,29 @@ const About = () => {
             With an eye for detail and a commitment to accessibility, I craft
             interfaces that marry aesthetics with functionality. Check out some
             of my work in the Portfolio section.
-          </motion.p>
-
-          <motion.p
+          </p>
+          </Show>
+          <Show>
+          <p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.75 }}
           >
             Let&apos;s create something remarkable together
-          </motion.p>
+          </p>
+          </Show>
         </div>
         <div className="flex flex-col gap-3 md:w-1/2">
-          <motion.span
+          <Show>
+          <span
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 2 }}
             className="text-3xl font-semibold"
           >
             My Skills
-          </motion.span>
+          </span>
+          </Show>
           <Skillset />
         </div>
       </div>
@@ -146,6 +153,7 @@ function Skillset() {
   return (
     <div className="flex gap-3 flex-wrap">
       {data.map((skill) => (
+        <Show>
         <div
           className="bg-yellow hover:bg-black hover:text-white cursor-pointer text-black font-bold py-3 flex-shrink-0 border px-6 rounded-md text-center text-lg"
           key={skill.id}
@@ -155,6 +163,7 @@ function Skillset() {
          animate={{ opacity: 1, y: 0 }}
          transition={{ duration: 1.25, delay: 2 }}>{skill.skill}</motion.p>
         </div>
+        </Show>
       ))}
     </div>
   );

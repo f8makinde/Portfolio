@@ -8,6 +8,7 @@ import pizza from "../assets/img/pizza.png"
 import link from "../assets/svg/link.svg";
 import Imdb from "../assets/img/imdb.png";
 import { FaGithub } from "react-icons/fa";
+import Show from './Show';
 const Projects = () => {
   
   return (
@@ -89,23 +90,18 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
           className="md:w-[100%]  md:h-[100%] w-full object-contain rounded-xl shadow-lg "
         />
         <div className="flex flex-col  gap-3 px-4 md:border-b-0 py-2 border-b-2">
-       
-            <motion.h1  
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 1 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1 }}className="font-primary md:text-4xl text-3xl font-bold">
+       <Show>
+            <h1  
+className="font-primary md:text-4xl text-3xl font-bold">
               {name}
-            </motion.h1>
-     
-    
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }} className="lg:text-lg text-base font-medium font-secondary">
+            </h1>
+            </Show>
+    <Show>
+            <p 
+            className="lg:text-lg text-base font-medium font-secondary">
               {desc}
-            </motion.p>
+            </p>
+            </Show>
           <div className="flex flex-wrap items-center gap-2">
             {skill.map((skills, index) => {
               return (
@@ -126,10 +122,9 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
               );
             })}
           </div>
-            <motion.a
-             initial={{ opacity: 0, y: 30 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.6, delay: 1.5 }}
+          <Show>
+            <a
+            
               href={linkText}
               target="_blank"
               type="button"
@@ -137,15 +132,17 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
             >
               Live Demo
               <Image src={link} alt="chat-icon" />
-            </motion.a>
-        
-          <motion.a       
+            </a>
+        </Show>
+        <Show>
+          <a       
               initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.5 }}
           href={gitLink} target="_blank" className="cursor-pointer">
           <FaGithub size={30}/>
-          </motion.a>
+          </a>
+          </Show>
         </div>
       </motion.div>
     );
