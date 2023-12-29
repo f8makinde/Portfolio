@@ -13,7 +13,7 @@ const Navbar = () => {
     setActive(to);
   }
   return (
-    <div className={`w-full mx-auto md:px-[50px] px-8 md:py-[22px] py-4 sticky top-0  left-0 z-50 border shadow-lg`}>
+    <div className={`w-full mx-auto md:px-[50px] px-8 md:py-[22px] py-4 sticky top-0  left-0 z-50 border shadow-lg bg-white`}>
       <div className="md:flex xl:max-w-[1400px] px-10  mx-auto justify-between hidden">
         <motion.span  
          initial={{ x: -100, opacity: 0 }}
