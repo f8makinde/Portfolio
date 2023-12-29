@@ -20,8 +20,9 @@ const Projects = () => {
 className="w-full bg-white md:h-screen lg:mb-32" id="projects">
     <div className="mx-auto lg:max-w-[1400px] md:px-[50px] px-8">
       <div>
-          <div className="flex flex-col">
-              <p className="text-2xl font-semibold text-purple-700">Projects</p>
+          <div>
+            
+              <p className="text-2xl font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">Projects</p>
               <h2 className="font-bold text-[40px] font-primary">
                 Small selection of things I’ve built
               </h2>

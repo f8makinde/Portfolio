@@ -16,7 +16,7 @@ const About = () => {
         <div className="flex-shrink-1 md:w-1/2 gap-3">
           <Show>
           <span
-            className="md:text-3xl text-2xl font-semibold text-purple-500"
+            className="md:text-3xl text-2xl font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text"
           >
             About Me
           </span>
@@ -85,7 +85,7 @@ const About = () => {
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 2 }}
-            className="text-3xl font-semibold"
+            className="text-3xl font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text"
           >
             My Skills
           </span>

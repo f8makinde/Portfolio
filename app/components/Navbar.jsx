@@ -133,7 +133,10 @@ const Navbar = () => {
         <div>
           {isOpen && (
             <ul className="flex font-secondaryBld py-2 w-full flex-col text-lg font-bold">
-              <li
+              <motion.li   
+               initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
                 className={`p-3 cursor-pointer ${
                   active === "home" ? "border-b-2 border-purple-500 w-[30%]" : ""
                 }`}
@@ -149,8 +152,11 @@ const Navbar = () => {
                 >
                   Home
                 </Link>
-              </li>
-              <li
+              </motion.li>
+              <motion.li
+                     initial={{ opacity: 0, y: -20 }}
+                     animate={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.5, delay: 0.1 }}
                 className={`p-3 cursor-pointer ${
                   active === "projects"
                     ? "border-b-2 border-purple-500 w-[30%]"
@@ -168,8 +174,11 @@ const Navbar = () => {
                 >
                   Projects
                 </Link>
-              </li>
-              <li
+              </motion.li>
+              <motion.li
+                 initial={{ opacity: 0, y: -20 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.5, delay: 0.2 }}
                 className={`p-3 cursor-pointer ${
                   active === "about" ? "border-b-2 border-purple-500 w-[30%]" : ""
                 }`}
@@ -185,8 +194,11 @@ const Navbar = () => {
                 >
                   About Me
                 </Link>
-              </li>
-              <li
+              </motion.li>
+              <motion.li
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
                 className={`p-3 cursor-pointer ${
                   active === "contact" ? "border-b-2 border-purple-500 w-[30%]" : ""
                 }`}
@@ -202,7 +214,7 @@ const Navbar = () => {
                 >
                   Contact
                 </Link>
-              </li>
+              </motion.li>
             </ul>
           )}
         </div>

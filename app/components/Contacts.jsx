@@ -15,11 +15,11 @@ const Contacts = () => {
   }
 
   return (
-    <div className='w-full flex py-10 text-black h-screen' id='contact'> 
+    <div className='w-full flex py-10 text-black md:h-screen' id='contact'> 
     <div className='mx-auto max-w-[800px] md:px-[50px] px-8'>
       <div className='flex-shrink-1 items-center justify-center gap-3'>
         <Show>
-      <h2 className='font-bold md:text-[40px] my-3 text-3xl lg:text-center font-primary text-purple-500'>Interested in working with me?</h2> 
+      <h2 className='font-bold md:text-[40px] my-3 text-3xl lg:text-center font-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text'>Interested in working with me?</h2> 
       </Show>
       <Show>
             <h1 className='text-xl font-medium md:text-center'>I’m currently open to joining a new team of creative developers. If you have a question, proposal, idea or just want to say hi, Go ahead.</h1>
@@ -84,7 +84,7 @@ const Contacts = () => {
       </div>
       <div>
         <Show>
-        <button className='hover:shadow-form rounded-md hover:bg-purple-600 bg-purple-500 transition-colors py-3 px-8 text-base font-semibold text-white outline-none'>
+        <button className='hover:shadow-form rounded-md hover:bg-purple-600 bg-purple-500 transition-colors py-3 px-8 text-base font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white'>
           Submit
         </button>
         </Show>
