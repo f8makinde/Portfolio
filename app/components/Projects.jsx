@@ -80,7 +80,7 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
       <motion.div 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.25 }}
      
        className="flex md:flex-col flex-col-reverse  border border-yellow rounded-2xl md:py-4 overflow-hidden md:h-[100%] px-8">
         <Image
@@ -95,7 +95,7 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 1 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}className="font-primary md:text-4xl text-3xl font-bold">
+          transition={{ duration: 0.6, delay: 1 }}className="font-primary md:text-4xl text-3xl font-bold">
               {name}
             </motion.h1>
      
@@ -103,7 +103,7 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }} className="lg:text-lg text-base font-medium font-secondary">
+          transition={{ duration: 0.6, delay: 1.2 }} className="lg:text-lg text-base font-medium font-secondary">
               {desc}
             </motion.p>
           <div className="flex flex-wrap items-center gap-2">
@@ -112,7 +112,7 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
                   <motion.ul  
                       initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                     key={index}
                     className="text-white cursor-pointer rounded-full"
                     style={{
@@ -129,7 +129,7 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
             <motion.a
              initial={{ opacity: 0, y: 30 }}
              animate={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.6, delay: 0.8 }}
+             transition={{ duration: 0.6, delay: 1.5 }}
               href={linkText}
               target="_blank"
               type="button"
@@ -142,7 +142,7 @@ function SmallProject({ image, name, desc, skill, linkText, gitLink }) {
           <motion.a       
               initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
           href={gitLink} target="_blank" className="cursor-pointer">
           <FaGithub size={30}/>
           </motion.a>
