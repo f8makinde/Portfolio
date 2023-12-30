@@ -6,12 +6,13 @@ import Show from './Show';
 
 
 
-
 const Contacts = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   function onSubmit(data) {
     sendEmail(data);
+    reset(); 
+    
   }
 
   return (

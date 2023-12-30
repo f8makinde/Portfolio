@@ -51,10 +51,7 @@ const About = () => {
             className="text-lg"
           >
             By merging design and technology, I transform concepts into
-            responsive, interactive websites. With an eye for detail and a
-            commitment to accessibility, I craft interfaces that marry
-            aesthetics with functionality. Check out some of my work in the
-            Portfolio section.
+            responsive, interactive websites.
           </p>
           </Show>
           <Show>
@@ -70,7 +67,7 @@ const About = () => {
           </p>
           </Show>
           <Show>
-          <p
+          <p className="text-lg"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.75 }}
