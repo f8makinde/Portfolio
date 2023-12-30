@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { FaLinkedinIn, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import Show from "./Show";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
