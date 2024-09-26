@@ -5,6 +5,8 @@ import fintekImg from "../assets/img/fintekk.png";
 import frot from "../assets/img/frot.png";
 import Image from 'next/image'
 import pizza from "../assets/img/pizza.png"
+import hitch from "../assets/img/hitch.png"
+import flow from "../assets/img/flowop.png"
 import link from "../assets/svg/link.svg";
 import Imdb from "../assets/img/imdb.png";
 import { FaGithub } from "react-icons/fa";
@@ -28,7 +30,7 @@ className="w-full bg-white md:h-screen lg:mb-32" id="projects">
               </h2>
         </div>
         <div className='grid md:grid-cols-2 sm:grid-cols-2 items-center justify-between gap-6 overflow-auto flex-1'>
-        <SmallProject
+        {/* <SmallProject
                   name="IMdb Clone"
                   desc="
                 IMDb (Internet Movie Database) clone"
@@ -37,16 +39,8 @@ className="w-full bg-white md:h-screen lg:mb-32" id="projects">
                   linkText="https://f8-imdb-clone.vercel.app"
                   gitLink="https://github.com/f8makinde/Imdb-clone.git"
                
-                />
-                  <SmallProject
-                  name="Fintekk Page"
-                  desc="A landing page"
-                  skill={["React Js", "Tailwind Css"]}
-                  image={fintekImg}
-                  linkText="https://f8makinde.github.io/FINTEKK-LANDING-PAGE/"
-                  gitLink="https://github.com/f8makinde/FINTEKK-LANDING-PAGE.git"
-                  
-                />
+                /> */}
+               
                     <SmallProject
                   name="Order Pizza"
                   desc="
@@ -65,6 +59,26 @@ className="w-full bg-white md:h-screen lg:mb-32" id="projects">
                   image={frot}
                   linkText="https://amd12.vercel.app/"
                   gitLink="https://github.com/f8makinde/Amorad-page.git"
+                  
+                />
+                      <SmallProject
+                  name="Hitch Guardian"
+                  desc="
+                Hitch guardian"
+                  skill={["Next Js", "Tailwind Css"]}
+                  image={hitch}
+                  linkText="https://www.hitchguardian.me/"
+                  gitLink=""
+                  
+                />
+                    <SmallProject
+                  name="Flow optix"
+                  desc="
+               Flow optix"
+                  skill={["Next Js", "Tailwind Css"]}
+                  image={flow}
+                  linkText="https://flowoptix.me/"
+                  gitLink=""
                   
                 />
         </div>
