@@ -5,8 +5,6 @@ import fintekImg from "../assets/img/fintekk.png";
 import frot from "../assets/img/frot.png";
 import Image from 'next/image'
 import pizza from "../assets/img/pizza.png"
-import hitch from "../assets/img/hitch.png"
-import flow from "../assets/img/flowop.png"
 import link from "../assets/svg/link.svg";
 import Imdb from "../assets/img/imdb.png";
 import { FaGithub } from "react-icons/fa";
@@ -61,26 +59,26 @@ className="w-full bg-white md:h-screen lg:mb-32" id="projects">
                   gitLink="https://github.com/f8makinde/Amorad-page.git"
                   
                 />
-                      <SmallProject
-                  name="Hitch Guardian"
-                  desc="
-                Hitch guardian"
-                  skill={["Next Js", "Tailwind Css"]}
-                  image={hitch}
-                  linkText="https://www.hitchguardian.me/"
-                  gitLink=""
+                <SmallProject
+                  name="Fintekk Page"
+                  desc="A landing page"
+                  skill={["React Js", "Tailwind Css"]}
+                  image={fintekImg}
+                  linkText="https://f8makinde.github.io/FINTEKK-LANDING-PAGE/"
+                  gitLink="https://github.com/f8makinde/FINTEKK-LANDING-PAGE.git"
                   
                 />
-                    <SmallProject
-                  name="Flow optix"
+
+                 <SmallProject
+                  name="IMdb Clone"
                   desc="
-               Flow optix"
+                IMDb (Internet Movie Database) clone"
                   skill={["Next Js", "Tailwind Css"]}
-                  image={flow}
-                  linkText="https://flowoptix.me/"
-                  gitLink=""
-                  
-                />
+                  image={Imdb}
+                  linkText="https://f8-imdb-clone.vercel.app"
+                  gitLink="https://github.com/f8makinde/Imdb-clone.git"
+               
+                />   
         </div>
         </div>
         </div>
